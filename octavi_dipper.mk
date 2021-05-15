@@ -6,10 +6,17 @@
 
 $(call inherit-product, device/xiaomi/dipper/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common OctaviOS stuff.
 $(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
+OCTAVI_BUILD_TYPE := Official
+OCTAVI_DEVICE_MAINTAINER := TonyJoaca
+TARGET_SCREEN_DENSITY := 420
+
+#Gapps
+TARGET_GAPPS_ARCH := arm64
+WITH_GAPPS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := octavi_dipper
